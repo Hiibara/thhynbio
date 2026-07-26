@@ -132,6 +132,8 @@
             z-index: 3;
             pointer-events: none;
         }
+
+        /* Căn chỉnh lại chữ click to enter nằm mượt trên tay */
 .enter-text {
     position: absolute;
     top: 65.5%;
@@ -140,15 +142,21 @@
     font-family: 'Comfortaa', sans-serif;
     color: #ffffff;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 700; /* Làm chữ đậm hơn một chút cho dễ đọc */
     text-transform: uppercase;
     letter-spacing: 5px;
     padding: 16px 36px;
     border-radius: 50px;
-    background: rgba(0, 0, 0, 0.85);
+    
+    /* Dùng nền đen mờ đậm (85%) để chặn hoàn toàn màu nền phía sau */
+    background: rgba(0, 0, 0, 0.85); 
+    
+    /* Tạo viền sáng trắng mỏng để tách biệt nút với ảnh nền */
     border: 1.5px solid rgba(255, 255, 255, 0.4);
+    
+    /* Đổ bóng sâu để nút "nổi" hẳn lên trên ảnh nền */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 15px rgba(255, 255, 255, 0.2);
-
+    
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     z-index: 4;
@@ -156,6 +164,8 @@
     transition: all 0.3s ease;
     animation: floatUpDown 2.5s ease-in-out infinite;
 }
+
+/* Hiệu ứng khi rê chuột vào */
 .enter-text:hover {
     background: rgba(20, 20, 20, 0.95);
     border-color: rgba(255, 255, 255, 0.9);
