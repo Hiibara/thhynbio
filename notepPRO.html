@@ -127,31 +127,41 @@
             position: absolute;
             height: 100%;
             width: 100%;
-            background: url('https://i.postimg.cc/k5cm89Fw/1783758622994-331241538741613603-5576895064337547486-327292f6450bc3ea31ee72b70334e74a.jpg') no-repeat center center;
-            background-size: contain;
+            background: url('https://wallpaperbat.com/img/33663041-anime-girl-wallpaper-4k-milky-way.jpg') no-repeat center center;
+            background-size: cover;
             z-index: 3;
             pointer-events: none;
         }
+.enter-text {
+    position: absolute;
+    top: 65.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Comfortaa', sans-serif;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    padding: 16px 36px;
+    border-radius: 50px;
+    background: rgba(0, 0, 0, 0.85);
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 15px rgba(255, 255, 255, 0.2);
 
-        /* Căn chỉnh lại chữ click to enter nằm mượt trên tay */
-        .enter-text {
-            position: absolute;
-            top: 65.5%;
-            left: 50%;
-            font-family: 'Comfortaa', sans-serif;
-            color: rgba(255, 255, 255, 0.95);
-            font-size: 15px;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            padding: 12px 30px;
-            border-radius: 30px;
-            background: rgba(0, 0, 0, 0.55);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(3px);
-            -webkit-backdrop-filter: blur(3px);
-            z-index: 4;
-            animation: textGlow 2s ease-in-out infinite alternate, floatUpDown 2.3s ease-in-out infinite;
-        }
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 4;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: floatUpDown 2.5s ease-in-out infinite;
+}
+.enter-text:hover {
+    background: rgba(20, 20, 20, 0.95);
+    border-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.9), 0 0 25px rgba(255, 255, 255, 0.5);
+    transform: translateX(-50%) scale(1.05);
+}
 
         @keyframes textGlow {
             from { box-shadow: 0 0 10px rgba(255,255,255,0.05); opacity: 0.7; }
